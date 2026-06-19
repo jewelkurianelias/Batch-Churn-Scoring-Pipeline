@@ -1,0 +1,18 @@
+data:
+  raw_data_path: "data/raw_churn_data.csv"
+  daily_batch_path: "data/daily_batch.csv"
+  predictions_path: "data/predictions.csv"
+
+model:
+  model_dir: "models/"
+  experiment_name: "churn_prediction"
+
+features:
+  target: "churn"
+  numerical: 
+    - "tenure_months"
+    - "monthly_charges"
+    - "total_charges"
+  categorical: 
+    - "subscription_type"
+    - "payment_method"
